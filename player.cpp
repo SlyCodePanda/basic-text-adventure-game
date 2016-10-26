@@ -8,7 +8,7 @@ using namespace std;
 
 // Basic Player constructor that allows for input giving the player their position in x & y space, their level, health, and exp.
 
-Player::Player( int xPos, int yPos, int lvl, int hp, int ex )
+Player::Player( int xPos, int yPos, int lvl, int hp, int ex, int dam, int maxhp )
 	:posX( xPos ), posY( yPos ), level( lvl ), health( hp ), exp( ex )
 {
 	
@@ -59,7 +59,7 @@ void Player::setInventory(Item **invent, int inventNum)
 void Player::getInventory()
 {
   for(int i = 0; i < inventoryNum; i++){
-    cout << inventory[i]->name << endl;
+    cout << i << "." << inventory[i]->name << endl;
   }
 }
 

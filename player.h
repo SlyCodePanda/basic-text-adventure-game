@@ -23,11 +23,12 @@ class Item;
 class Player
 {
  public:
-  Player( int xPos, int yPos, int lvl, int hp, int ex );
+  Player( int xPos, int yPos, int lvl, int hp, int ex, int dam, int maxhp );
 
   int level;
   int health;
   int exp;
+  int maxHealth;
 
   string weaponName;
   
@@ -36,6 +37,7 @@ class Player
   int finalDamage;
   
   Item **inventory;
+  int itemNum;
   int inventoryNum;
   
   int posX;

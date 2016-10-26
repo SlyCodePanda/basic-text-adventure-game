@@ -8,6 +8,10 @@
 
 using namespace std;
 
+// Forward declaration of Player class.
+
+class Player;
+
 // Constructs enemy and sets the type of enemy, health and attack values.
 // Checks the health of the enemy to see if health has reached 0.
 // Enemy attacks player, depleting players health by the attack value.

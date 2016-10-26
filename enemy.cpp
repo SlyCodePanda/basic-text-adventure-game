@@ -36,8 +36,7 @@ void Enemy::attack( Player *player1 )
 {
   int damage = attackDmg + rand() % 10 + 1;
   player1->health = player1->health - damage;
-  cout << "The " << type << " attacks you, dealing " << damage << " damage." << endl;
-  cin;
+  cout << "The " << type << " attacks you, dealing " << damage << " damage." << endl << endl;
 }
 
 Enemy::~Enemy()

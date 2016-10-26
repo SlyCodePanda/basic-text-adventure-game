@@ -23,7 +23,10 @@ void Potion::apply( Player *player1 )
 {
   player1->health += effect;
   cout << "You drink " << name << "and restore " << effect << " points of health" << endl;
-  cin;	
+  if( player1->health > 100 )
+    {
+      player1->health = 100;
+    }
 }
 
 Potion::~Potion()
@@ -41,7 +44,7 @@ void Weapon::apply( Player *player1 )
 {
   player1->weaponDamage = effect;
   cout << "You have equipped " << name << endl;
-  cin;
+  player1->finalDamage = player1->weaponDamage + player1->playerDamage;
 }
 
 Weapon::~Weapon()

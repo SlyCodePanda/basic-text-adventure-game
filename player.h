@@ -1,19 +1,29 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+
 #include <iostream>
 #include <string>
+
 #include "item.h"
-/*#include "enemy.h"*/
+#include "enemy.h"
 
 using namespace std;
+
+// Forward decleration of Enemy and Item classes.
+
 class Enemy;
 class Item;
-//Encapsulates all information regarding the player.
-//Allows you to enter a x-coordinate, y-coordinate, level, health, and exp. in initial constructor.
+
+// Encapsulates all information regarding the player.
+// Allows you to enter a x-coordinate, y-coordinate, level, health, and exp. in initial constructor.
+
+// Applies the array of pointers to the variable inventory.
+// Retrieves values from inventory, mostly for testing purposes.
+
 class Player
 {
  public:
-  Player(int xPos, int yPos, int lvl, int hp, int ex);
+  Player( int xPos, int yPos, int lvl, int hp, int ex );
 
   int level;
   int health;
@@ -31,19 +41,17 @@ class Player
   int posX;
   int posY;
 
-	void setInventory(Item **invt, int invtNum);	//applies the array of pointers to the variable inventory
-	void getInventory();	//retrieves values from inventory, mostly for testing purposes
+  void setInventory( Item **invt, int invtNum );	
+  void getInventory();
 	
-  void setPlayerDamage(int pDam);
+  void setPlayerDamage( int pDam );
 
-  void setWeaponDamage(int wDam);
+  void setWeaponDamage( int wDam );
   int getWeaponDamage();
 
   void setFinalDamage();
   int getFinalDamage();
 
-
-  
   ~Player();
 
 };
